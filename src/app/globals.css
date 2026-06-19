@@ -2,25 +2,47 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827; /* Dark charcoal/black for text */
+  --primary-btn: #1a56db; /* Royal Blue */
+  --warning-btn: #e02424; /* Crimson Red */
+  --success-btn: #057a55; /* Forest Green */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Force Light High-Contrast Theme */
+html, body {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700; /* Bold by default for elder visibility */
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden !important;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation; /* Disable double-tap zoom delay */
+  -webkit-user-select: none; /* Prevent accidental text selections */
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Ensure container fits viewport without scrolling */
+.kiosk-container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100vw;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom micro-animations for high quality feel */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
 }
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s infinite ease-in-out;
+}
+
