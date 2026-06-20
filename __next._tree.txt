@@ -1,2 +1,2 @@
 :HL["/antigravity-landing-page-08/_next/static/chunks/1exgzlpzwukgt.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"x0Kvo-N7qjrJx2gCFV-6M"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"CJX-cAniZfgxZDjodTYpO"}
